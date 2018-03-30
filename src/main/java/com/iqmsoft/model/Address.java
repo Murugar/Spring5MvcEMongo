@@ -9,11 +9,11 @@ public class Address {
 
     @Id
     private long id;
-    private String rua;
+    private String street;
     private int numero;
-    private String bairro;
-    private String cidade;
-    private String estado;
+    private String neighborhood;
+    private String city;
+    private String state;
 
     /**
      *
@@ -21,23 +21,15 @@ public class Address {
     public Address() {
     }
 
-    /**
-     *
-     * @param id
-     * @param rua
-     * @param numero
-     * @param bairro
-     * @param cidade
-     * @param estado
-     */
+   
     @PersistenceConstructor
-    public Address(long id, String rua, int numero, String bairro, String cidade, String estado) {
+    public Address(long id, String street, int numero, String neighborhood, String city, String state) {
         this.id = id;
-        this.rua = rua;
+        this.street = street;
         this.numero = numero;
-        this.bairro = bairro;
-        this.cidade = cidade;
-        this.estado = estado;
+        this.neighborhood = neighborhood;
+        this.city = city;
+        this.state = state;
     }
 
     public long getId() {
@@ -49,12 +41,12 @@ public class Address {
         return this;
     }
 
-    public String getRua() {
-        return rua;
+    public String getStreet() {
+        return street;
     }
 
-    public Address setRua(String rua) {
-        this.rua = rua;
+    public Address setStreet(String rua) {
+        this.street = rua;
         return this;
     }
 
@@ -67,30 +59,30 @@ public class Address {
         return this;
     }
 
-    public String getBairro() {
-        return bairro;
+    public String getNeighborhood() {
+        return neighborhood;
     }
 
-    public Address setBairro(String bairro) {
-        this.bairro = bairro;
+    public Address setNeighborhood(String bairro) {
+        this.neighborhood = bairro;
         return this;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getCity() {
+        return city;
     }
 
-    public Address setCidade(String cidade) {
-        this.cidade = cidade;
+    public Address setCity(String city) {
+        this.city = city;
         return this;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getState() {
+        return state;
     }
 
-    public Address setEstado(String estado) {
-        this.estado = estado;
+    public Address setState(String state) {
+        this.state = state;
         return this;
     }
 }

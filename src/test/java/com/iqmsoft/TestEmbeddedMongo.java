@@ -70,7 +70,8 @@ public class TestEmbeddedMongo {
 
             for(int j = 1; j <= quantidadeEnderecos; j++) {
                 Address endereco = new Address();
-                endereco.setId(j).setRua("R. Teste" + j).setNumero(j).setBairro("B. Teste" + j).setCidade("C. Teste" + j).setEstado("E. Teste" + j);
+                endereco.setId(j).setStreet("R. Teste" + j).setNumero(j).setNeighborhood("B. Teste" + j)
+                .setCity("C. Teste" + j).setState("E. Teste" + j);
                 enderecos.add(endereco);
             }
 
